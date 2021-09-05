@@ -1,0 +1,96 @@
+
+.menu-button {
+    background: transparent;
+    color: rgb(136, 136, 136);
+    padding: 12px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background: rgb(39, 39, 39);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.menu-content a {
+    color: rgb(136, 136, 136);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in;
+}
+
+.menu-content a:hover {
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in;
+}
+
+.menu:hover .menu-content {
+    display: block;
+    transition: all 0.2s ease-in;
+}
+
+.menu:hover .menu-button {
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease-in;
+}
+/* Animate Slide In */
+@media (min-width: 992px) {
+    .animate {
+      animation-duration: 0.3s;
+      -webkit-animation-duration: 0.3s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+    100% {
+      transform:translateY(0rem);
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: transform;
+      -webkit-opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      -webkit-opacity: 1;
+    }
+    0% {
+      -webkit-transform: translateY(1rem);
+      -webkit-opacity: 0;
+    }
+  }
+  
+  .slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+  }
